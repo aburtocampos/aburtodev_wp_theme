@@ -18,5 +18,5 @@ jobs:
           server: ftp://157.173.214.157
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./wp-content
+          local-dir: ./wp-content/
           server-dir: /public_html/wp-content/
