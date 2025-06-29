@@ -1,6 +1,6 @@
 .project-grid,.project-grid-editor-preview {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+     grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
   row-gap: 4rem;
 }
@@ -96,9 +96,23 @@
     background-color: #024c81;
 }
 
-@media (max-width:740px){
-  .project-grid{
-      grid-template-columns: 1fr;
+@media (max-width:1024px){
+.project-grid{
+     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width:992px){
+
+}
+
+@media (max-width:768px){
+  
+}
+
+@media (max-width:576px){
+      .project-grid{
+     grid-template-columns: repeat(1, 1fr);
   }
 }
 
