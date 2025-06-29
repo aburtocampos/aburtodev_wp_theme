@@ -1,0 +1,15 @@
+$supreme-fonts: (
+  400: "SupremeLLWeb-Regular.woff2",
+  500: "SupremeLLWeb-Medium.woff2",
+  700: "SupremeLLWeb-Bold.woff2",
+);
+
+@each $weight, $file in $supreme-fonts {
+  @font-face {
+    font-family: 'SupremeLLWeb';
+    src: url('public/fonts/#{$file}') format('woff2');
+    font-weight: #{$weight};
+    font-style: normal;
+    font-display: swap;
+  }
+}

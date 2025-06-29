@@ -1,0 +1,9 @@
+@use 'global' as *; 
+
+@use 'components/footer';
+@use 'components/header';
+@use 'components/home';
+@use 'components/blog';
+@use 'components/default';
+@use 'components/single';
+@use "components/migrate"

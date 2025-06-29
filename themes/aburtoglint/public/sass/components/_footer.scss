@@ -1,0 +1,85 @@
+@use '../global' as *;
+
+.footer{
+    margin-top: 1rem;
+  
+    .prefooter{
+        padding-block: 3rem;
+          display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            @include desktop-sm{
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .col-left{
+                h3{
+                    color: $color-primary;
+                      font-size: 2rem;
+                      text-align: center;
+                      @include tablet{
+                         font-size: 2.5rem;
+                         font-weight: bold;
+                      }
+                }
+            }
+            .col-right{
+                a{
+                   background-color: $color-primary;
+                   padding-inline: 20px;
+                   padding-block: 8px;
+                   color: $color-light;
+                   font-size: 1.8rem;
+                   text-decoration: none;
+                   transition: box-shadow 300ms ease 0ms;
+                   &:hover{
+                        box-shadow: inset 0px -52px 0px 0px $color-secondary;
+                   }
+                }
+            }
+    }
+
+    .foo{
+        padding: 3rem 0 2rem 0;
+       text-align: center;
+         background-color: $color-secondary;
+       h4{
+            color: #fff;
+            font-size: 1.5rem;
+            margin: 1.5rem 0 0 0;
+            @include mobo-lg{
+                font-size: 2rem;
+            }
+        }
+        .menu-navigation{
+            padding: 0; display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-direction: column;
+            @include mobo-sm{
+               flex-direction: row;
+            }
+            li{
+               list-style: none;
+                a{
+                    text-decoration: underline;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .contain{
+       background-color: #fff;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        p{
+          margin: 6px 0;
+        }
+    }
+}

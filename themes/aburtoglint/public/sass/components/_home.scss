@@ -1,0 +1,514 @@
+@use '../global' as *;
+
+.hero-container{
+ height:700px;
+    .inner-container-cover{
+        max-width: 1200px;
+        margin: 0 auto;
+        h1{
+            margin: 0 0 20px 0;
+            font-size: 2.5rem;
+            @include tablet{
+             font-size: 4rem;
+            }
+        }
+        .phrase{
+          font-size: 1.5rem;
+          @include mobo-lg{
+             font-size: 2rem;
+          }
+           .br{
+              display: none;
+              @include tablet{
+                display: block;
+              }
+            }
+        }
+        .btn-containers{
+          margin-top: 1.5rem;
+          display: flex;
+          gap: 1.5rem;
+           flex-direction: column;
+          @include mobo-lg{
+            flex-direction: row;
+          }
+          .btn{
+              font-size: 1.8rem;
+              padding-inline: 20px;
+              padding-block: 8px;
+              font-weight: bold;
+              text-decoration: none;
+              transition: box-shadow 300ms ease 0ms;
+            &.btn1{
+               background: $color-light;
+                   color: $color-secondary;
+                   border: 4px solid transparent;
+                  
+             }
+             &.btn2{
+                border: 4px solid $color-light;
+                color: $color-light;
+             }
+              
+                   &:hover{
+                        box-shadow: inset 0 -60px 0 0 $color-secondary;
+                        color: $color-light;
+                   }
+          }
+          
+          
+        }
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    background-color: $color-secondary;
+    padding-block: 1.5rem;
+    position: relative;
+    .wp-block-group__inner-container{
+       .row-marquee {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 2rem;
+        align-items: center;
+     
+      /*   animation: marquee-left 20s linear infinite;
+ background: linear-gradient(165deg, $color-primary 7%, $color-primary 88%);
+        -webkit-background-clip: text;
+        background-clip: text; 
+        -webkit-text-fill-color: transparent; 
+         text-fill-color: transparent;*/
+
+        @keyframes marquee-left {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+    
+        p, figure {
+          flex: 0 0 auto;
+          margin: 0;
+        }
+    
+        p {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            gap: 2rem;
+          span{
+              color: $color-light;
+              font-size: 3rem; 
+              text-transform: uppercase;
+              font-weight: bold;
+              @include mobo-lg{
+                font-size: 4rem;
+              }
+            }
+          
+       /*   &:after{
+              content: "";
+              display: inline-block;
+              width: 24px;     
+              height: 24px;
+              margin-left: 10px;
+              background-image: url('/wp-content/uploads/2025/05/cropped-favicon-aburto-white.webp');
+              background-size: contain;
+              background-repeat: no-repeat;
+              vertical-align: middle;
+          }*/
+           img {
+             max-height: 50px;
+              width: auto;
+            }
+        }
+    
+       
+      }
+    }
+  
+   
+  }
+  
+.about-container{
+    padding-block: 6rem;
+    justify-content: center;
+    .container{
+      gap: 3rem;
+      align-items: center;
+        flex-direction: column;
+      .col-left{
+        figure{
+          border-radius: .75em;
+          video{
+            border-radius: 0.75em;
+            height: 100%;
+            aspect-ratio: 4 / 4;
+            object-fit: cover;
+            @include mobo-lg{
+              aspect-ratio: auto;
+            }
+          }
+        }
+      }
+      .col-right{
+         padding-inline: 1.2rem;
+         margin-top: -45%;
+         background-color: rgba(255, 255, 255, 0.65);
+         margin-inline: 1rem;
+         border-radius: .75em;
+         box-shadow: 1px 1px 16px rgba(0, 0, 0, .3);
+         padding-block: 1.2rem;
+         @include mobo-lg{
+              margin-inline: 2rem;
+              margin-top: -35%;
+         }
+        @include tablet{
+          margin-inline: 2.1rem;
+        }
+        h2{
+          font-size: 2rem;
+          color:$color-primary;
+          @include mobo-lg{
+            font-size: 3rem;
+          }
+        }
+        p{
+         font-size: 1rem;
+          margin-bottom: 15px;
+          color:$color-dark;
+          line-height: 1.5;
+           @include tablet{
+           font-size: 1.25rem;
+          }
+        }
+      }
+    }
+}
+
+.projects-container{
+  h2{
+      font-size: 2rem;
+      color:$color-primary;
+      @include mobo-lg{
+        font-size: 3rem;
+      }
+  }
+  .inner{
+    width: 100%;
+    .grid-container{
+      row-gap: 3rem;
+      @include tablet{
+        padding: 0 15px
+      }
+      li{
+        figure{
+          margin: 0;
+          overflow: hidden;
+          img{
+            object-position: top;
+            transform: scale(1);
+            transition: all .16s ease-out;
+            transition: .3s ease-out;
+          }
+          &:hover img{
+            transform: scale(1.2);
+          }
+        }
+        h2{
+          margin: 0;
+          font-size: 2rem;
+          @include tablet{
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+    .pagination{
+        margin-top: 3rem;
+          .numbers-page{
+            margin: 1.5rem 0;
+             .page-numbers{
+            font-size: 1.4rem;
+            color:$color-secondary;
+            &.current{
+              font-size: 2rem;
+              color:$color-primary;
+              font-weight: 600;
+            }
+          }
+          }
+         
+          .previous-page,.next-page{
+            span{
+               font-size: 2rem;
+               color:$color-secondary;
+            }
+           
+          }
+    }
+  }
+
+
+}
+
+.testimonials-container{
+  margin: 6rem 0;
+  h2{
+    font-size: 2rem;
+    color:$color-primary;
+    @include mobo-lg{
+       font-size: 3rem;
+    }
+  }
+  .glint-testimonial-slider{
+      height: auto;
+       padding-inline: 0;
+    @include tablet{
+       height: 320px;
+    }
+    .slick-arrow{
+      display: none!important;
+   
+        &:before {
+          font-family: 'slick';
+          font-size: 30px;
+          line-height: 1;
+          opacity: .75;
+          color: $color-primary;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+      }
+    }
+    .testimonial-slide {
+      text-align: center;
+      padding: 1rem;
+      .testimonial-image{
+        img {
+          max-width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          margin: 0 auto 1rem;
+          object-fit: cover;
+        }
+      }
+      blockquote{
+        p{
+          font-size: 1.1rem;
+          margin-bottom: 15px;
+          color:$color-dark;
+          @include tablet{
+            max-width: 70%;
+            margin-inline: auto;
+          }
+        }
+      }
+      .author{
+        font-weight: 600;
+      }
+      .testimonial-rating{
+        color: gold;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+.contact-container{
+  h2{
+    font-size: 2rem;
+    color: $color-primary;
+    @include mobo-lg{
+       font-size: 3rem;
+    }
+  }
+  .row-container{
+      padding: 40px;
+     
+      gap: 2rem;
+      grid-template-columns: 1fr;
+      border: none;
+    @include desktop-lg{
+       grid-template-columns: 1fr 1fr;
+        border: 1px solid grey;
+        border-radius: .75em;
+    }
+
+    .col-left{
+      h2{
+        font-size: 2.5rem;
+        color: $color-primary;
+        text-align: center;
+          @include desktop-lg{
+               text-align: start;
+          }
+      }
+      figure.wp-block-image{
+        display: none;
+         @include desktop-lg{
+          display: block;
+         }
+      }
+      
+    }
+    .col-right{
+      justify-content: center;
+       align-items: center;
+    /*  .glint-contact-form {
+        margin: 0 auto;
+        .form-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          margin-bottom: 1rem;
+        }
+
+        .form-group {
+          flex: 1 1 45%;
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          &.full {
+            flex: 1 1 100%;
+          }
+        }
+
+        label {
+          font-weight: 600;
+          margin-bottom: 6px;
+          font-size: 0.95rem;
+        }
+
+        input,
+        textarea {
+          padding: 16px 14px;
+          font-size: 1rem;
+          border: 1px solid #ddd;
+          border-radius: 0;
+          background: #f9f9f9;
+          transition: border-color 0.3s;
+
+          &:focus {
+            outline: none;
+            border-color: $color-accent;
+            background: #fff;
+          }
+        }
+
+        textarea {
+          resize: vertical;
+        }
+
+        .error {
+          color: red;
+          font-size: 0.85rem;
+          margin-top: 4px;
+        }
+
+        .glint-submit-button {
+          background-color: $color-secondary;
+          color: white;
+          padding: 14px 30px;
+          font-size: 1rem;
+          font-weight: bold;
+          border: none;
+          border-radius: 0;
+          cursor: pointer;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          transition: background-color 0.3s;
+
+          &:hover {
+            background-color: $color-primary;
+          }
+        }
+
+        .glint-contact-success {
+          background-color: #e6ffed;
+          border-left: 5px solid #28a745;
+          padding: 15px;
+          margin-bottom: 20px;
+          color: #155724;
+          border-radius:0;
+        }
+      }*/
+    }
+  }
+  
+
+}
+
+.latest-container{
+  margin-top: 4rem!important;
+  h2{
+     font-size: 2rem;
+    color: $color-primary;
+    @include mobo-lg{
+       font-size: 3rem;
+    }
+  }
+
+  .latest-items{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 2rem;
+      @include tablet{
+         grid-template-columns: 1fr 1fr;
+      }
+         @include desktop-xl{
+           grid-template-columns: 1fr 1fr 1fr;
+         }
+    li{
+       border-radius: .75em;
+       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+           max-width: 400px;
+       div.wp-block-latest-posts__featured-image{
+            line-height: 0;
+         a{
+           overflow: hidden; 
+             border-radius: .75em .75em 0 0;
+           img{
+                width: 100%;
+                min-width: 300px;
+                height: auto;
+                max-width: 100%;
+                max-height: 100%;
+                border-radius: .75em .75em 0 0;
+                display: block;
+                transition: filter 0.3s ease, transform 0.3s ease;
+              @include mobo-sm{
+                width: 400px;
+                height: 300px;
+                max-width: 400px;
+                max-height: 300px;
+                object-fit: cover; 
+              }
+               &:hover{
+                  filter: grayscale(.75) brightness(0.7);
+                  transform: scale(1.05);
+                }
+            }
+         }
+        }
+
+        a.wp-block-latest-posts__post-title{
+          color: $color-secondary;
+            margin-inline: 1rem;
+            padding: 1rem 0;
+            display: block;
+            &:hover{
+              color: $color-accent;
+            }
+        }
+        @include desktop-xl{
+          &:last-child{
+            display: none;
+          }
+        }
+        
+    }
+  }
+}

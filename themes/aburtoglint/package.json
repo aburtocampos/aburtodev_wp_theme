@@ -1,0 +1,21 @@
+{
+  "name": "aburtoglint",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "scss": "sass public/sass/main.scss ./style.css --style=compressed --no-source-map --load-path=assets/sass",
+    "scss:watch": "sass --watch public/sass/main.scss:./style.css --style=compressed --load-path=assets/sass",
+    "scss:watch-all": "sass --watch public/sass:./ --style=compressed --no-source-map",
+
+       "build": "wp-scripts build includes/blocks/project-grid/index.js --output-path includes/blocks/project-grid/build",
+    "start": "wp-scripts start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.87.0",
+     "@wordpress/scripts": "^27.0.0"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "apiVersion": 2,
+  "name": "glint/project-grid",
+  "title": "Project Grid",
+  "category": "widgets",
+  "icon": "grid-view",
+  "description": "Displays a grid of custom posts.",
+  "editorScript": "file:./build/index.js",
+  "render": "file:./render.php",
+  "style": "file:./style.css",
+"editorStyle": "file:./style.css",
+  "attributes": {
+    "itemsToShow": { "type": "number", "default": 6 },
+    "postType": { "type": "string", "default": "project" },
+    "category": { "type": "string", "default": "" },
+    "linkTitle": { "type": "boolean", "default": true },
+    "linkImage": { "type": "boolean", "default": true }
+  },
+  "supports": { "html": false }
+}

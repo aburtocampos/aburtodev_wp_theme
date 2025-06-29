@@ -1,0 +1,38 @@
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Start upgrade from 0.0.0
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_emails`] => Created table `wp_newsletter_emails`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_sent`] => Created table `wp_newsletter_sent`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,8 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter`] => Created table `wp_newsletter`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_user_logs`] => Created table `wp_newsletter_user_logs`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_user_meta`] => Created table `wp_newsletter_user_meta`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_stats`] => Created table `wp_newsletter_stats`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,7 MB/2 GB - raburto1510@gmail.com > Array
+(
+    [`wp_newsletter_logs`] => Created table `wp_newsletter_logs`
+)
+
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,8 MB/2 GB - raburto1510@gmail.com > Backing up options of 0.0.0
+28-10-2024 01:22:08 - INFO  - 8.5.8 - 6,8 MB/2 GB - raburto1510@gmail.com > End
