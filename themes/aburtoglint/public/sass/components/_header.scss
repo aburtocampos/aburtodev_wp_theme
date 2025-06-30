@@ -75,7 +75,7 @@
           max-width: 100%;
         }
         li {
-          margin-bottom: 1rem;
+          margin-bottom: 1.5rem;
           @include tablet{
                 margin-block: 1rem;
               &:last-child a{
@@ -94,7 +94,7 @@
           }
           a {
             text-decoration: none;
-            font-size: 2rem;
+            font-size: 1.2rem;
             color: $color-secondary;
             font-weight: 700;
             text-transform: uppercase;
