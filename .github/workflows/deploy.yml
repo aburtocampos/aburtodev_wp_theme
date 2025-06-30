@@ -19,4 +19,4 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./
-          server-dir: /home/u866186605/domains/aburto.dev/public_html/wp-content/
+          server-dir: ./wp-content/
