@@ -19,6 +19,8 @@ class Glint {
 
     protected Glint_Ajax_Blog $ajax_blog;
 
+    private Glint_Schema $schema; 
+
     /**
      * Initialize the theme
      */
@@ -44,6 +46,8 @@ class Glint {
         require_once GLINT_DIR_PATH . 'public/class-glint-public.php';
         require_once GLINT_DIR_PATH . 'includes/class-glint-theme.php';
 
+        require_once GLINT_DIR_PATH . 'includes/class-glint-schema.php';
+
         // Módulos opcionales
         require_once GLINT_DIR_PATH . 'includes/custom-post-types/class-glint-cpt.php';
         require_once GLINT_DIR_PATH . 'includes/shortcodes/class-glint-shortcodes.php';
@@ -65,6 +69,7 @@ class Glint {
         $this->blocks      = new Glint_Blocks();
         $this->theme = new Glint_Theme();
         $this->ajax_blog = new Glint_Ajax_Blog();
+        $this->schema = new Glint_Schema();
     }
 
     /**
@@ -92,8 +97,9 @@ class Glint {
         $this->cpt->register();          // usa add_action internamente
         $this->shortcodes->register();   // usa add_shortcode
         $this->blocks->register();       // usa register_block_type
-         $this->theme->register();
-          $this->ajax_blog->register();
+        $this->theme->register();
+        $this->ajax_blog->register();
+        $this->schema->register( $this->loader );
     }
 
     /**
